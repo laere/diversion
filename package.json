@@ -1,5 +1,5 @@
 {
-  "name": "webpackhotreloading",
+  "name": "diversion",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "webpackhotreloading"
+    "url": "diversion"
   },
   "author": "",
   "license": "ISC",
