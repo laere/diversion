@@ -386,8 +386,8 @@ a {
   width: 100%; }
 
 .dashboard {
-  background-color: #252626;
-  min-height: 100vh;
+  background-color: #222;
+  min-height: 92vh;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -410,5 +410,26 @@ a {
     color: #73797F; }
     .dashboard i:hover, .dashboard .dashboardName:hover {
       color: #fff; }
+
+.mainHeader {
+  width: 100%;
+  height: 8vh;
+  background-color: #333;
+  padding: 28px 48px; }
+  .mainHeader .searchbar {
+    float: right;
+    position: relative; }
+    .mainHeader .searchbar i {
+      background-color: #fff;
+      color: #222;
+      position: absolute;
+      right: 8px;
+      bottom: 6px;
+      background-color: none; }
+    .mainHeader .searchbar input {
+      border: none;
+      padding: 4px;
+      width: 350px;
+      border-radius: 5px; }
 
 /*# sourceMappingURL=main.css.map */

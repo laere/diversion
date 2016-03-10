@@ -1,6 +1,6 @@
 .dashboard {
-  background-color: $mainblack;
-  min-height: 100vh;
+  background-color: $darkblack;
+  min-height: 92vh;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -27,7 +27,7 @@
   }
 
   i, .dashboardName {
-    color: #73797F;
+    color: $lightgrey;
     &:hover {
       color: $white;
     }
