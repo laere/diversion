@@ -1,0 +1,37 @@
+.dashboard {
+  background-color: $mainblack;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 200px;
+
+  .dashboardLink {
+    padding: 48px;
+    width: 200px;
+    &:hover {
+      background-color: $red;
+      cursor: pointer;
+      i,
+      .dashboardName {
+        color: $white;
+      }
+    }
+  }
+
+  .dashboardName {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  i, .dashboardName {
+    color: #73797F;
+    &:hover {
+      color: $white;
+    }
+  }
+
+
+}
