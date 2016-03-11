@@ -3,12 +3,12 @@ import { Link } from 'react-router';
 
 const DashboardLink = (props) => {
   return (
-    <div className="dashboardLink">
-      <Link to={props.link}>
+    <Link to={props.link}>
+      <div className="dashboardLink">
         <i className={props.icon}></i>
         <div className="dashboardName">{props.link}</div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

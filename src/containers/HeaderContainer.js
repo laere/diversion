@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import Searchbar from '../components/Searchbar';
+
 
 export default class HeaderContainer extends Component {
   render() {
@@ -7,7 +9,7 @@ export default class HeaderContainer extends Component {
     <header>
       <div className="mainHeader">
         <div>
-          <h1 className="logo">Diversion</h1>
+          <Link to="/"><h1 className="logo">Diversion</h1></Link>
         </div>
         <Searchbar />
       </div>
