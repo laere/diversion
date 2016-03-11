@@ -10,19 +10,19 @@ export default class Dashboard extends Component {
         videos
         userss*/}
         <DashboardLink
-          link="Streams"
+          link="streams"
           icon="fa fa-desktop fa-2x"
         />
         <DashboardLink
-          link="Games"
+          link="games"
           icon="fa fa-gamepad fa-2x"
         />
         <DashboardLink
-          link="Videos"
+          link="videos"
           icon="fa fa-video-camera fa-2x"
         />
         <DashboardLink
-          link="Users"
+          link="users"
           icon="fa fa-users fa-2x"
         />
       </div>
