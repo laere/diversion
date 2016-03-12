@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
-import Header from '../components/Header';
+import Heading from '../components/Heading';
 
 export default class UsersContainer extends Component {
   render() {
     return (
       <div className="usersContainer">
         <MainContent>
-          <Header
+          <Heading
             className="usersHeader header"
             header="Users"
           />

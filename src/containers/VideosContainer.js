@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
-import Header from '../components/Header';
+import Heading from '../components/Heading';
 
 export default class VideosContainer extends Component {
   render() {
     return (
       <div className="videosContainer">
         <MainContent>
-          <Header
+          <Heading
             className="videosHeader header"
             header="Videos"
           />

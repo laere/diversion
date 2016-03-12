@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
-import Header from '../components/Header';
+import Heading from '../components/Heading';
 
 export default class StreamsContainer extends Component {
   render() {
     return (
       <div className="streamsContainer">
         <MainContent>
-          <Header
+          <Heading
             className="streamsHeader header"
             header="Streams"
           />

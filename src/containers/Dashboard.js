@@ -5,7 +5,7 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-
+        
         <DashboardLink
           className="dashboardLink streamsLink"
           link="streams"

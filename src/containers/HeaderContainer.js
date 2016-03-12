@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+
+import Wrapper from '../components/Wrapper';
 import Searchbar from '../components/Searchbar';
+import Logo from '../components/Logo';
 
 
 export default class HeaderContainer extends Component {
   render() {
     return (
     <header>
-      <div className="mainHeader">
-        <div>
-          <Link to="/">
-            <h1 className="logo">Diversion</h1>
-          </Link>
-        </div>
+      <Wrapper className="mainHeader">
+        <Logo
+          path='/'
+          className="logo"
+        />
         <Searchbar />
-      </div>
+      </Wrapper>
     </header>
     );
   }
