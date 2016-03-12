@@ -38,5 +38,5 @@ module.exports = {
       loader: 'style!css!sass'
     }]
   }
-  
+
 };
