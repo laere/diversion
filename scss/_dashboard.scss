@@ -8,31 +8,35 @@
   width: 200px;
   z-index: 2;
 
+  .dashboardName {
+    color: $lightgrey;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
   .dashboardLink {
     padding: 48px;
     width: 200px;
+    color: $lightgrey;
     &:hover {
-      background-color: $red;
       cursor: pointer;
-      i,
-      .dashboardName {
+      i, .dashboardName {
         color: $white;
       }
     }
   }
 
-  .dashboardName {
-    color: $white;
-    text-decoration: none;
-    font-size: 1.5rem;
+  .streamsLink:hover {
+    background-color: $lightgreen;
   }
-
-  i, .dashboardName {
-    color: $lightgrey;
-    &:hover {
-      color: $white;
-    }
+  .gamesLink:hover {
+    background-color: $red;
   }
-
+  .videosLink:hover {
+    background-color: $lightpurple;
+  }
+  .usersLink:hover {
+    background-color: $darkpurple;
+  }
 
 }
