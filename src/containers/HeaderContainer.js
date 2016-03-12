@@ -1,22 +1,47 @@
 import React, { Component } from 'react';
-
-import Wrapper from '../components/Wrapper';
 import Searchbar from '../components/Searchbar';
 import Logo from '../components/Logo';
 
+import { connect } from 'react-redux';
+import { getInput } from '../actions/actions';
 
-export default class HeaderContainer extends Component {
+
+class HeaderContainer extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+  }
+
+  handleOnSubmit(e) {
+    e.preventDefault();
+  }
+
   render() {
+
+    const { input, getInput } = this.props;
+
     return (
     <header>
-      <Wrapper className="mainHeader">
+      <div className="mainHeader">
         <Logo
           path='/'
           className="logo"
         />
-        <Searchbar />
-      </Wrapper>
+        <Searchbar
+
+        />
+      </div>
     </header>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    input: state.input
+  };
+};
+
+export default connect(mapStateToProps, { getInput } )(HeaderContainer);

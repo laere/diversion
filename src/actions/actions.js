@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 
-export const DASHBOARD_ICON_SELECTED = 'DASHBOARD_ICON_SELECTED';
+const GET_INPUT = 'GET_INPUT';
 
 
-export const selectDashboardIcon = () => {
+export const getInput = (input) => {
   return {
-    type: DASHBOARD_ICON_SELECTED
+    type: GET_INPUT,
+    payload: input
   };
 };
