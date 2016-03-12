@@ -9,15 +9,14 @@
   z-index: 2;
 
   .dashboardName {
-    color: $lightgrey;
     text-decoration: none;
     font-size: 1.5rem;
+    color: $white;
   }
 
   .dashboardLink {
     padding: 48px;
     width: 200px;
-    color: $lightgrey;
     &:hover {
       cursor: pointer;
       i, .dashboardName {

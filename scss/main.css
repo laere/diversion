@@ -407,13 +407,12 @@ div, span {
   width: 200px;
   z-index: 2; }
   .dashboard .dashboardName {
-    color: #73797F;
     text-decoration: none;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    color: #fff; }
   .dashboard .dashboardLink {
     padding: 48px;
-    width: 200px;
-    color: #73797F; }
+    width: 200px; }
     .dashboard .dashboardLink:hover {
       cursor: pointer; }
       .dashboard .dashboardLink:hover i, .dashboard .dashboardLink:hover .dashboardName {
@@ -451,7 +450,8 @@ div, span {
       width: 300px;
       border-radius: 5px;
       font-size: 1.5rem;
-      background-color: #444; }
+      background-color: #444;
+      color: #fff; }
       .mainHeader .searchbar input:focus {
         outline: none; }
 
