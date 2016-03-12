@@ -19,6 +19,7 @@
 
   .searchbar {
     position: relative;
+    display: inline-block;
     input {
       border: none;
       padding: 8px;
@@ -32,5 +33,15 @@
       }
     }
   }
+
+  .twitchButton {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 32px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
 
 }

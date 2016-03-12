@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 //  STORE
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 // MIDDLEWARE
 import Thunk from 'redux-thunk';
 import Promise from 'redux-promise';
@@ -19,7 +19,10 @@ import Users from './containers/UsersContainer';
 //REDUCERS
 import AppState from './reducers/reducer';
 // Store with middleware.
-const createStoreWithMiddleware = applyMiddleware(Thunk, Promise)(createStore);
+const createStoreWithMiddleware = compose(
+  applyMiddleware(Thunk, Promise),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+)(createStore);
 // Store with middleware and reducers
 const State = combineReducers({
   routing: routerReducer,

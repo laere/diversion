@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 
+
 const Searchbar = ( { input, onChange } ) => {
   return (
-    <form >
-      <div className="searchbar">
-        <input type="text" placeholder="Search..." onChange={onChange} value={input}/>
+    <div>
+      <div className="twitchButton">
+        <img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" class="twitch-connect" href="#" />
       </div>
-    </form>
+      <div className="searchbar">
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={onChange}
+          value={input}
+          />
+      </div>
+    </div>
+
   );
 };
 

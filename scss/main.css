@@ -381,18 +381,6 @@ p {
 a {
   text-decoration: none; }
 
-div, span {
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  flex-shrink: 0;
-  align-content: flex-start;
-  border: 0 solid black;
-  margin: 0;
-  padding: 0; }
-
 .container {
   min-height: 100vh;
   width: 100%; }
@@ -443,7 +431,8 @@ div, span {
     color: #fff;
     font-family: sans-serif; }
   .mainHeader .searchbar {
-    position: relative; }
+    position: relative;
+    display: inline-block; }
     .mainHeader .searchbar input {
       border: none;
       padding: 8px;
@@ -454,6 +443,12 @@ div, span {
       color: #fff; }
       .mainHeader .searchbar input:focus {
         outline: none; }
+  .mainHeader .twitchButton {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 32px; }
+    .mainHeader .twitchButton:hover {
+      cursor: pointer; }
 
 .mainContent {
   width: 100%;
