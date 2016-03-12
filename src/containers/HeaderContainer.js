@@ -10,12 +10,13 @@ class HeaderContainer extends Component {
 
   constructor(props) {
     super(props);
-
-    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
-  handleOnSubmit(e) {
-    e.preventDefault();
+
+  handleOnChange(e) {
+    const { getInput } = this.props;
+    getInput(e.target.value);
   }
 
   render() {
@@ -30,7 +31,8 @@ class HeaderContainer extends Component {
           className="logo"
         />
         <Searchbar
-
+          input={input}
+          onChange={this.handleOnChange}
         />
       </div>
     </header>

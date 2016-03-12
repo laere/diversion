@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const GET_INPUT = 'GET_INPUT';
+export const GET_INPUT = 'GET_INPUT';
 
 
 export const getInput = (input) => {

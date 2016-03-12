@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-const Searchbar = () => {
+const Searchbar = ( { input, onChange } ) => {
   return (
-    <div className="searchbar">
-      <input type="text" placeholder="Search..." />
-    </div>
+    <form >
+      <div className="searchbar">
+        <input type="text" placeholder="Search..." onChange={onChange} value={input}/>
+      </div>
+    </form>
   );
 };
 
