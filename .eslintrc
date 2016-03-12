@@ -20,7 +20,7 @@
     "rules": {
         "semi": [2, "always"],
         "quotes": [2, "single"],
-        "eqeqeq" : [2, "smart"],
+        # "eqeqeq" : [2, "smart"],
         "comma-dangle" : [2, "never"],
         "no-extra-semi" : 2,
         "no-extra-boolean-cast" : 2,

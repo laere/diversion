@@ -1,19 +1,20 @@
 import dotProp from 'dot-prop-immutable';
 
 import {
-  SELECTED_ICON
+  DASHBOARD_ICON_SELECTED
 } from '../actions/actions';
 
 
 const INITIAL_STATE = {
-  selectedIcon: false
+  dashboardIconSelected: false
 };
 
 
-export default function(state = INITIAL_STATE, action) {
+export default function appState(state = INITIAL_STATE, action) {
   switch(action.type) {
-    case SELECTED_ICON:
+    case DASHBOARD_ICON_SELECTED:
       console.log(state);
+      state = dotProp.set(state, 'dashboardIconSelected', true);
       return state;
     default:
       return state;

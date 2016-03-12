@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 
-export const SELECTED_ICON = 'SELECTED_ICON';
+export const DASHBOARD_ICON_SELECTED = 'DASHBOARD_ICON_SELECTED';
 
 
-export const selectedIcon = () => {
+export const selectDashboardIcon = () => {
   return {
-    type: SELECTED_ICON
+    type: DASHBOARD_ICON_SELECTED
   };
 };

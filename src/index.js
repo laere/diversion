@@ -16,11 +16,14 @@ import Games from './containers/GamesContainer';
 import Streams from './containers/StreamsContainer';
 import Videos from './containers/VideosContainer';
 import Users from './containers/UsersContainer';
+//REDUCERS
+import AppState from './reducers/reducer';
 // Store with middleware.
 const createStoreWithMiddleware = applyMiddleware(Thunk, Promise)(createStore);
 // Store with middleware and reducers
 const State = combineReducers({
-  routing: routerReducer
+  routing: routerReducer,
+  AppState
 });
 const store = createStoreWithMiddleware(State);
 // Sync history with store
