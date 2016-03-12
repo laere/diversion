@@ -6,16 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" >
   <link rel="stylesheet" href="scss/main.css" media="all">
+  <!-- <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+  <script>
+  window.CLIENT_ID = '9bcp48oduen5leppeeh61unza1kkfqm';
+  $(function() {
+    // Initialize. If we are already logged in, there is no
+    // need for the connect button
+    Twitch.init({clientId: CLIENT_ID}, function(error, status) {
+      if (status.authenticated) {
+        // we're logged in :)
+        $('.status input').val('Logged in! Allowed scope: ' + status.scope);
+        // Show the data for logged-in users
+        $('.authenticated').removeClass('hidden');
+      } else {
+        $('.status input').val('Not Logged in! Better connect with Twitch!');
+        // Show the twitch connect button
+        $('.authenticate').removeClass('hidden');
+      }
+    });
+
+
+    $('.twitch-connect').click(function() {
+      Twitch.login({
+        scope: ['user_read', 'channel_read']
+      });
+    })
+
+    $('#logout button').click(function() {
+      Twitch.logout();
+
+      // Reload page and reset url hash. You shouldn't
+      // need to do this.
+      window.location = window.location.pathname
+    })
+
+    $('#get-name button').click(function() {
+      Twitch.api({method: 'user'}, function(error, user) {
+        $('#get-name input').val(user.display_name);
+      });
+    })
+
+    $('#get-stream-key button').click(function() {
+      Twitch.api({method: 'channel'}, function(error, channel) {
+        $('#get-stream-key input').val(channel.stream_key);
+      });
+    })
+
+  });
+
+
+</script> -->
 </head>
+
 <body>
   <div class="container"></div>
-  <script src="//code.jquery.com/jquery.min.js"></script>
-  <script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+
   <script src="/bundle.js"></script>
-  <script>
-    Twitch.init({clientId: '9bcp48oduen5leppeeh61unza1kkfqm'}, function(error, status) {
-      // the sdk is now loaded
-    });
-  </script>
+
 </body>
 </html>
