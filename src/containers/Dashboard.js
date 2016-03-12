@@ -13,43 +13,40 @@ class Dashboard extends Component {
   handleSelectIconClick(e) {
     e.preventDefault();
     console.log('click click');
-    const { selectDashboardIcon } = this.props;
-    selectDashboardIcon();
+    // const { selectDashboardIcon } = this.props;
+    // selectDashboardIcon();
   }
 
   render() {
 
-    const { dashboardIconSelected } = this.props;
-
-    const selected = dashboardIconSelected ? '#000' : '#777';
+    // const { dashboardIconSelected } = this.props;
+    // const selected = dashboardIconSelected ? '#000' : '#fff';
 
     return (
-      <div className="dashboard" onClick={this.handleSelectIconClick}>
+      <div className="dashboard">
 
         <DashboardLink
           className="dashboardLink streamsLink"
           link="streams"
           icon="fa fa-desktop fa-2x"
-          style={{backgroundColor: selected}}
         />
+
         <DashboardLink
           className="dashboardLink gamesLink"
           link="games"
           icon="fa fa-gamepad fa-2x"
-          style={{backgroundColor: selected}}
         />
+
         <DashboardLink
           className="dashboardLink videosLink"
           link="videos"
           icon="fa fa-video-camera fa-2x"
-          style={{backgroundColor: selected}}
         />
+
         <DashboardLink
           className="dashboardLink usersLink"
           link="users"
           icon="fa fa-users fa-2x"
-          style={{backgroundColor: selected}}
-
         />
 
       </div>

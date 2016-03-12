@@ -450,7 +450,8 @@ div, span {
       padding: 8px;
       width: 300px;
       border-radius: 5px;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      background-color: #444; }
       .mainHeader .searchbar input:focus {
         outline: none; }
 
