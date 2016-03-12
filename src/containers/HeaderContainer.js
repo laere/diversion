@@ -9,7 +9,9 @@ export default class HeaderContainer extends Component {
     <header>
       <div className="mainHeader">
         <div>
-          <Link to="/"><h1 className="logo">Diversion</h1></Link>
+          <Link to="/">
+            <h1 className="logo">Diversion</h1>
+          </Link>
         </div>
         <Searchbar />
       </div>

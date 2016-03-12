@@ -1,0 +1,28 @@
+.header {
+  position: absolute;
+  top: 8%;
+  font-size: 2.5rem;
+  color: $white;
+  text-align: center;
+  width: 100%;
+}
+
+.homeHeader {
+  @include header-background($lightblue);
+}
+
+.streamsHeader {
+  @include header-background($lightgreen);
+}
+
+.gamesHeader {
+  @include header-background($red);
+}
+
+.videosHeader {
+  @include header-background($lightpurple);
+}
+
+.usersHeader {
+  @include header-background($darkpurple);
+}
