@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 
-const Searchbar = ( { input, onChange } ) => {
+const Searchbar = ( { input, onChange, onClick } ) => {
   return (
     <div>
         {/*<input type="submit" value="Search" className="searchbarBtn" />*/}
-        <button className="searchbarBtn">
+        <button onClick={onClick} className="searchbarBtn">
           <i className="fa fa-search"></i>
         </button>
         <div className="searchbar">

@@ -11,6 +11,7 @@ export default class HomeContainer extends Component {
             className="homeHeader header"
             header="Home"
           />
+        
         </MainContent>
       </div>
     );

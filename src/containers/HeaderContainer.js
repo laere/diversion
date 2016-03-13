@@ -4,7 +4,7 @@ import Logo from '../components/Logo';
 
 
 import { connect } from 'react-redux';
-import { getInput, getStreams } from '../actions/actions';
+import { getInput, getUsers } from '../actions/actions';
 
 
 class HeaderContainer extends Component {
@@ -12,7 +12,7 @@ class HeaderContainer extends Component {
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
-    // this.handleOnSubmit = this.handleOnSubmit.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnChange(e) {
@@ -20,11 +20,11 @@ class HeaderContainer extends Component {
     getInput(e.target.value);
   }
 
-  // handleOnSubmit(e) {
-  //   e.preventDefault();
-  //   const { getStreams } = this.props;
-  //   getStreams();
-  // }
+  handleOnClick(e) {
+    e.preventDefault();
+    const { getUsers, input } = this.props;
+    getUsers(input);
+  }
 
   render() {
 
@@ -37,6 +37,7 @@ class HeaderContainer extends Component {
           <Searchbar
             input={input}
             onChange={this.handleOnChange}
+            onClick={this.handleOnClick}
          />
         </div>
       </header>
@@ -47,8 +48,8 @@ class HeaderContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     input: state.input,
-    streams: state.streams
+    users: state.users
   };
 };
 
-export default connect(mapStateToProps, { getInput, getStreams } )(HeaderContainer);
+export default connect(mapStateToProps, { getInput, getUsers } )(HeaderContainer);

@@ -35,6 +35,7 @@ export default function appState(state = INITIAL_STATE, action) {
       console.log(state);
       return state;
     case GET_USERS:
+      state = dotProp.set(state, 'users', action.payload);
       console.log(state);
       return state;
     case GET_INPUT:
