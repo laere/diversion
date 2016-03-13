@@ -9,6 +9,8 @@ export const GET_USERS = 'GET_USERS';
 const BASE_URL = 'https://api.twitch.tv/kraken/';
 
 const STREAMS_URL = BASE_URL + 'streams';
+const GAMES_URL = BASE_URL + 'games/top';
+const VIDEOS_URL = BASE_URL + 'videos/top';
 
 export const getStreams = () => {
   return (dispatch, getState) => {
@@ -25,6 +27,39 @@ export const getStreams = () => {
     });
   };
 };
+
+export const getGames = () => {
+  return (dispatch, getState) => {
+    const request = axios.get(GAMES_URL);
+
+    request.then(function(response) {
+      console.log(response);
+      dispatch({
+        type: GET_GAMES,
+        payload: request
+      });
+    }, function(err) {
+      console.log('error loading data');
+    });
+  };
+};
+
+export const getVideos = () => {
+  return (dispatch, getState) => {
+    const request = axios.get(VIDEOS_URL);
+
+    request.then(function(response) {
+      console.log(response);
+      dispatch({
+        type: GET_VIDEOS,
+        payload: request
+      });
+    }, function(err) {
+      console.log('error loading data');
+    });
+  };
+};
+
 
 export const getInput = (input) => {
   return {

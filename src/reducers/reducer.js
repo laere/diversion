@@ -27,9 +27,11 @@ export default function appState(state = INITIAL_STATE, action) {
       console.log(state);
       return state;
     case GET_GAMES:
+      state = dotProp.set(state, 'games', action.payload);
       console.log(state);
       return state;
     case GET_VIDEOS:
+      state = dotProp.set(state, 'videos', action.payload);
       console.log(state);
       return state;
     case GET_USERS:
