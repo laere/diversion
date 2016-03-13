@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import DashboardLink from '../components/DashboardLink';
 
-export default class Dashboard extends Component {
+import { connect } from 'react-redux';
+import { getStreams } from '../actions/actions';
+
+class Dashboard extends Component {
+
+  constructor(props) {
+    super(props);
+
+  }
+
   render() {
     return (
       <div className="dashboard">
@@ -42,3 +51,11 @@ export default class Dashboard extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    streams: state.streams
+  };
+};
+
+export default connect(mapStateToProps, { getStreams } )(Dashboard);

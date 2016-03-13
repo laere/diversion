@@ -409,34 +409,6 @@ a {
 .usersHeader {
   background-color: #774C60; }
 
-.dashboard {
-  background-color: #222;
-  min-height: 92vh;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  width: 200px;
-  z-index: 2; }
-  .dashboard .dashboardName {
-    text-decoration: none;
-    font-size: 1.5rem; }
-  .dashboard .dashboardLink {
-    padding: 48px;
-    width: 200px; }
-    .dashboard .dashboardLink:hover {
-      cursor: pointer; }
-      .dashboard .dashboardLink:hover i, .dashboard .dashboardLink:hover .dashboardName {
-        color: #fff; }
-  .dashboard .streamsLink:hover {
-    background-color: #09BC8A; }
-  .dashboard .gamesLink:hover {
-    background-color: #E84C4C; }
-  .dashboard .videosLink:hover {
-    background-color: #6870B8; }
-  .dashboard .usersLink:hover {
-    background-color: #774C60; }
-
 .mainHeader {
   width: 100%;
   height: 8vh;
@@ -481,6 +453,34 @@ a {
     padding-right: 32px; }
     .mainHeader .twitchButton:hover {
       cursor: pointer; }
+
+.dashboard {
+  background-color: #222;
+  min-height: 92vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 200px;
+  z-index: 2; }
+  .dashboard .dashboardName {
+    text-decoration: none;
+    font-size: 1.5rem; }
+  .dashboard .dashboardLink {
+    padding: 48px;
+    width: 200px; }
+    .dashboard .dashboardLink:hover {
+      cursor: pointer; }
+      .dashboard .dashboardLink:hover i, .dashboard .dashboardLink:hover .dashboardName {
+        color: #fff; }
+  .dashboard .streamsLink:hover {
+    background-color: #09BC8A; }
+  .dashboard .gamesLink:hover {
+    background-color: #E84C4C; }
+  .dashboard .videosLink:hover {
+    background-color: #6870B8; }
+  .dashboard .usersLink:hover {
+    background-color: #774C60; }
 
 .mainContent {
   width: 100%;
