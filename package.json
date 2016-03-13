@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline --hot"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline --hot --port ${PORT:-8080} --history-api-fallback"
   },
   "repository": {
     "type": "git",
