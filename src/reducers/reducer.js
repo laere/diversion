@@ -3,8 +3,10 @@ import { GET_INPUT, GET_STREAMS } from '../actions/actions';
 
 
 const INITIAL_STATE = {
-  input: '',
-  streams: []
+
+  streams: [],
+  input: ''
+
 };
 
 
@@ -12,7 +14,7 @@ export default function appState(state = INITIAL_STATE, action) {
   switch(action.type) {
     case GET_STREAMS:
       console.log(state);
-      state = dotProp.set(state, 'streams', action.payload.data);
+      state = dotProp.set(state, 'streams', action.payload);
       return state;
     case GET_INPUT:
       console.log(state);

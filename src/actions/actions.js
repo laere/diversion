@@ -4,11 +4,11 @@ import axios from 'axios';
 export const GET_INPUT = 'GET_INPUT';
 export const GET_STREAMS = 'GET_STREAMS';
 
-const baseURL = 'https://api.twitch.tv/kraken/';
+const StreamsURL = 'https://api.twitch.tv/kraken/streams';
 
 export const getStreams = () => {
   return (dispatch, getState) => {
-    const request = axios.get(`${baseURL}streams/`);
+    const request = axios.get(StreamsURL);
 
     request.then(function(response) {
       console.log(response);

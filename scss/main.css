@@ -473,13 +473,15 @@ a {
       cursor: pointer; }
       .dashboard .dashboardLink:hover i, .dashboard .dashboardLink:hover .dashboardName {
         color: #fff; }
-  .dashboard .streamsLink:hover {
+  .dashboard .DashboardLinkWrapper {
+    display: block; }
+  .dashboard .DashboardLinkWrapper:hover .streamsLink, .dashboard .DashboardLinkWrapper--active .streamsLink {
     background-color: #09BC8A; }
-  .dashboard .gamesLink:hover {
+  .dashboard .DashboardLinkWrapper:hover .gamesLink, .dashboard .DashboardLinkWrapper--active .gamesLink {
     background-color: #E84C4C; }
-  .dashboard .videosLink:hover {
+  .dashboard .DashboardLinkWrapper:hover .videosLink, .dashboard .DashboardLinkWrapper--active .videosLink {
     background-color: #6870B8; }
-  .dashboard .usersLink:hover {
+  .dashboard .DashboardLinkWrapper:hover .usersLink, .dashboard .DashboardLinkWrapper--active .usersLink {
     background-color: #774C60; }
 
 .mainContent {
