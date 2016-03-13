@@ -3,7 +3,20 @@ import MainContent from '../components/MainContent';
 import Heading from '../components/Heading';
 import Streams from '../components/Streams';
 
-export default class StreamsContainer extends Component {
+import { connect } from 'react-redux';
+import { getStreams } from '../actions/actions';
+
+class StreamsContainer extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    const { getStreams } = this.props;
+    getStreams();
+  }
+
   render() {
     return (
       <div className="streamsContainer">
@@ -18,3 +31,11 @@ export default class StreamsContainer extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    streams: state.streams
+  };
+};
+
+export default connect(mapStateToProps, { getStreams } )(StreamsContainer);
