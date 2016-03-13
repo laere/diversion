@@ -1,47 +1,39 @@
 import React, { Component } from 'react';
 import DashboardLink from '../components/DashboardLink';
 
-import { connect } from 'react-redux';
-import { getStreams } from '../actions/actions';
 
-class Dashboard extends Component {
-
-  constructor(props) {
-    super(props);
-
-  }
-
+export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
 
         <DashboardLink
-          className="dashboardLink streamsLink"
-          link="streams"
+          style="dashboardLink streamsLink"
+          type="streams"
           icon="fa fa-desktop fa-2x"
           bgColor={'#09BC8A'}
           fontColor={'#fff'}
         />
 
         <DashboardLink
-          className="dashboardLink gamesLink"
-          link="games"
+          style="dashboardLink gamesLink"
+          type="games"
           icon="fa fa-gamepad fa-2x"
           bgColor={'#E84C4C'}
           fontColor={'#fff'}
         />
 
         <DashboardLink
-          className="dashboardLink videosLink"
-          link="videos"
+          style="dashboardLink videosLink"
+          type="videos"
           icon="fa fa-video-camera fa-2x"
           bgColor={'#6870B8'}
           fontColor={'#fff'}
         />
 
         <DashboardLink
-          className="dashboardLink usersLink"
-          link="users"
+          style="dashboardLink usersLink"
+          type="users"
           icon="fa fa-users fa-2x"
           bgColor={'#774C60'}
           fontColor={'#fff'}
@@ -51,11 +43,3 @@ class Dashboard extends Component {
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    streams: state.streams
-  };
-};
-
-export default connect(mapStateToProps, { getStreams } )(Dashboard);

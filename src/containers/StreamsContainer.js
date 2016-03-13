@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
 import Heading from '../components/Heading';
+import Streams from '../components/Streams';
 
 export default class StreamsContainer extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class StreamsContainer extends Component {
             className="streamsHeader header"
             header="Streams"
           />
+          <Streams />
         </MainContent>
       </div>
     );
