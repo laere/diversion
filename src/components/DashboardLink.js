@@ -7,6 +7,8 @@ const DashboardLink = (props) => {
       <Link
           to={props.link}
           style={{color: '#73797F' }}
+          className="DashboardLinkWrapper"
+          activeClassName="DashboardLinkWrapper--active"
           activeStyle={{backgroundColor: props.bgColor, color: props.fontColor}} >
         <div className={props.className}>
           <i className={props.icon}></i>

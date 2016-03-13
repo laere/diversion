@@ -24,17 +24,23 @@
     }
   }
 
-  .streamsLink:hover {
-    background-color: $lightgreen;
-  }
-  .gamesLink:hover {
-    background-color: $red;
-  }
-  .videosLink:hover {
-    background-color: $lightpurple;
-  }
-  .usersLink:hover {
-    background-color: $darkpurple;
+  .DashboardLinkWrapper {
+    display: block;
   }
 
+  .DashboardLinkWrapper:hover, .DashboardLinkWrapper--active {
+    .streamsLink {
+      background-color: $lightgreen;
+    }
+    .gamesLink {
+      background-color: $red;
+    }
+    .videosLink {
+      background-color: $lightpurple;
+    }
+    .usersLink {
+      background-color: $darkpurple;
+    }
+  }
 }
+
