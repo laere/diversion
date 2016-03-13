@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 
 
-const Searchbar = ( { input, onChange } ) => {
+const Searchbar = ( { input, onChange, onSubmit } ) => {
   return (
     <div>
-      <div className="twitchButton">
-        <img src="http://ttv-api.s3.amazonaws.com/assets/connect_dark.png" className="twitch-connect" href="#" />
-      </div>
-      <div className="searchbar">
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={onChange}
-          value={input}
-          />
-      </div>
+      <form onSubmit={onSubmit}>
+        <button className="searchbarBtn">
+          <i className="fa fa-search"></i>
+        </button>
+        <div className="searchbar">
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={onChange}
+            value={input}
+            />
+        </div>
+      </form>
     </div>
 
   );

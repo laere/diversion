@@ -34,6 +34,19 @@
     }
   }
 
+  .searchbarBtn {
+    height: 33px;
+    vertical-align: bottom;
+    border: none;
+    margin-right: 4px;
+    border-radius: 5px;
+    background-color: $lightblack;
+    .fa-search {
+      color: $lightgrey;
+
+    }
+  }
+
   .twitchButton {
     display: inline-block;
     vertical-align: top;
@@ -42,6 +55,5 @@
       cursor: pointer;
     }
   }
-
 
 }

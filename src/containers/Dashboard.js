@@ -5,12 +5,12 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-        
+
         <DashboardLink
           className="dashboardLink streamsLink"
           link="streams"
           icon="fa fa-desktop fa-2x"
-          bgColor={'#09BC8A'}
+          bgColor={'10px solid #09BC8A'}
           fontColor={'#fff'}
         />
 
@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
           className="dashboardLink videosLink"
           link="videos"
           icon="fa fa-video-camera fa-2x"
-          bgColor={'#6870B8'}
+          bgColor={'2px solid #6870B8'}
           fontColor={'#fff'}
         />
 
@@ -34,7 +34,7 @@ export default class Dashboard extends Component {
           className="dashboardLink usersLink"
           link="users"
           icon="fa fa-users fa-2x"
-          bgColor={'#774C60'}
+          bgColor={'10px solid #774C60'}
           fontColor={'#fff'}
         />
 

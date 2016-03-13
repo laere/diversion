@@ -12,7 +12,7 @@ export default function appState(state = INITIAL_STATE, action) {
   switch(action.type) {
     case GET_STREAMS:
       console.log(state);
-      state = dotProp.set(state, 'streams', action.payload);
+      state = dotProp.set(state, 'streams', action.payload.data);
       return state;
     case GET_INPUT:
       console.log(state);

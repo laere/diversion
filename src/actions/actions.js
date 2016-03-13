@@ -6,9 +6,9 @@ export const GET_STREAMS = 'GET_STREAMS';
 
 const baseURL = 'https://api.twitch.tv/kraken/';
 
-export const getStreams = (input) => {
+export const getStreams = () => {
   return (dispatch, getState) => {
-    const request = axios.get(`${baseURL}streams/${input}`);
+    const request = axios.get(`${baseURL}streams/`);
 
     request.then(function(response) {
       console.log(response);
