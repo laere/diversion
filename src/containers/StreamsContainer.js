@@ -18,14 +18,17 @@ class StreamsContainer extends Component {
   }
 
   render() {
+
+    const { loaded } = this.props;
+
     return (
       <div className="streamsContainer">
         <MainContent>
           <Heading
             className="streamsHeader header"
             header="Streams"
-          />
-          <Streams />
+            />
+          {loaded ? <Streams /> : false } {/*Replace false with a loading component*/}
         </MainContent>
       </div>
     );
@@ -34,7 +37,8 @@ class StreamsContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    streams: state.streams
+    streams: state.streams,
+    loaded: state.loaded
   };
 };
 
