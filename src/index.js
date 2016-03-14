@@ -17,17 +17,16 @@ import Streams from './containers/StreamsContainer';
 import Videos from './containers/VideosContainer';
 import Users from './containers/UsersContainer';
 //REDUCERS
-import AppState from './reducers/reducer';
+import State from '../reducers/RootReducer';
+
+
+
 // Store with middleware.
 const createStoreWithMiddleware = compose(
   applyMiddleware(Thunk, Promise),
   window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
-// Store with middleware and reducers
-const State = combineReducers({
-  routing: routerReducer,
-  AppState
-});
+
 const store = createStoreWithMiddleware(State);
 // Sync history with store
 const history = syncHistoryWithStore(browserHistory, store);

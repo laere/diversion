@@ -3,40 +3,35 @@ import Streams from '../components/Streams';
 import Loading from '../components/Loading';
 
 import { connect } from 'react-redux';
-import { getStreams } from '../actions/actions';
+import { fetchStreams } from '../reducers/StreamsReducer.js';
 
 class StreamsContainer extends Component {
 
-  constructor(props) {
-    super(props);
-
-  }
-
   componentDidMount() {
-    const { getStreams } = this.props;
-    getStreams();
+    const { dispatch, streams } = this.props;
+
+    if (!streams.fetching && !streams.streams)
+      dispatch(fetchStreams());
   }
 
   render() {
-
-    const { streams, loaded } = this.props;
+    const { streams } = this.props;
 
     return (
       <div>
-        {loaded
-        ? <Streams streams={streams}/>
-        : <Loading name="Loading...." />}
+        {streams.fetching
+          ? <Loading name="Loading...." />
+          : <Streams streams={streams}/>
+        }
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
-    streams: state.streams,
-    loaded: state.loaded
+    streams: state.streams
   };
 };
 
-export default connect(mapStateToProps, { getStreams } )(StreamsContainer);
+export default connect(mapStateToProps)(StreamsContainer);
