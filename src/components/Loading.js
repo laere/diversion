@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-const Loading = () => {
+const Loading = (props) => {
   return (
     <div className="loading">
-      <h1>Loading....</h1>
+      <h1>{props.name}</h1>
     </div>
   );
 };

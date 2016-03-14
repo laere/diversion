@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import MainContent from '../components/MainContent';
-import Heading from '../components/Heading';
 import Streams from '../components/Streams';
 import Loading from '../components/Loading';
 
@@ -15,31 +13,26 @@ class StreamsContainer extends Component {
   }
 
   componentDidMount() {
-
     const { getStreams } = this.props;
-
     getStreams();
   }
 
   render() {
 
-    const { loaded, streams } = this.props;
+    const { streams, loaded } = this.props;
 
     return (
-      <div className="streamsContainer">
-        <MainContent>
-          <Heading
-            className="streamsHeader header"
-            header="Streams"
-            />
-          {loaded ? <Streams streams={streams} /> : <Loading /> } {/*Replace false with a loading component*/}
-        </MainContent>
+      <div>
+        {loaded
+        ? <Streams streams={streams}/>
+        : <Loading name="Loading...." />}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     streams: state.streams,
     loaded: state.loaded

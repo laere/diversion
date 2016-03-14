@@ -6,7 +6,24 @@
   color: $white;
   text-align: center;
   width: 100%;
+  // animation: slideIn 0.3s ease-in;
+  // animation-fill-mode: forwards;
 }
+
+// @keyframes slideIn {
+//   0% {
+//     width: 0%;
+//   }
+//   25% {
+//     width: 33%;
+//   }
+//   50% {
+//     width: 66%;
+//   }
+//   100% {
+//     width: 100%;
+//   }
+// }
 
 .homeHeader {
   @include header-background($lightblue);

@@ -22,12 +22,12 @@ const INITIAL_STATE = {
 export default function appState(state = INITIAL_STATE, action) {
   switch(action.type) {
     case GET_STREAMS:
-      state = dotProp.set(state, 'streams', action.payload);
+      state = dotProp.set(state, 'streams', action.payload.data.streams);
       state = dotProp.set(state, 'loaded', true);
       console.log(state);
       return state;
     case GET_GAMES:
-      state = dotProp.set(state, 'games', action.payload);
+      state = dotProp.set(state, 'games', action.payload.data.top);
       console.log(state);
       return state;
     case GET_VIDEOS:

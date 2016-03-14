@@ -20,6 +20,7 @@
   .searchbar {
     position: relative;
     display: inline-block;
+    align-self: flex-end;
     input {
       border: none;
       padding: 8px;
@@ -28,6 +29,7 @@
       font-size: 1.5rem;
       background-color: $lightblack;
       color: $white;
+  
       &:focus {
         outline: none;
         animation: extend 0.25s ease-out;
@@ -66,5 +68,6 @@
       width: 400px;
     }
   }
+
 
 }
