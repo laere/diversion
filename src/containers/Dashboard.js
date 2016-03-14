@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
           style="dashboardLink streamsLink"
           type="streams"
           icon="fa fa-desktop fa-2x"
-          bgColor={'#09BC8A'}
+          bgColor={'10px solid #09BC8A'}
           fontColor={'#fff'}
         />
 
