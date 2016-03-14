@@ -1,4 +1,4 @@
-class APIFetchReducerPrototype {
+class FetchReducerPrototype {
   static initialState = {
     data: null,
     fetching: false,
@@ -7,11 +7,10 @@ class APIFetchReducerPrototype {
 
   constructor({ actions }) {
     this.actions = actions;
-
     return this.reducer;
   }
 
-  reducer = (state = APIFetchReducerPrototype.initialState, action = {}) => {
+  reducer = (state = FetchReducerPrototype.initialState, action = {}) => {
     switch (action.type) {
       case this.actions.REQUEST:
         return Object.assign({}, state, {
@@ -36,4 +35,4 @@ class APIFetchReducerPrototype {
   }
 }
 
-export default APIFetchReducerPrototype;
+export default FetchReducerPrototype;

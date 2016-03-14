@@ -1,10 +1,13 @@
 import React, { PropTypes } from 'react';
-import { streamsFetchActions } from './StreamsReducer';
+import Streams from '../components/Streams';
+import Loading from '../components/Loading';
+import { connect } from 'react-redux';
+import { streamsFetchActions } from '../reducers/StreamsReducer';
 
 class StreamsContainer extends React.Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    streams: PropTypes.object.isRequired,
+    streams: PropTypes.object.isRequired
   };
 
   componentDidMount() {
@@ -17,14 +20,14 @@ class StreamsContainer extends React.Component {
   render() {
     const { streams } = this.props;
     return streams.fetching ?
-      <div>Loading...</div> :
-      <div>{/* access streams via streams.data */}</div>;
+      <Loading name='Loading...'/> :
+      <Streams streams={streams}/>;
   }
 }
 
 function mapStateToProps(state) {
   return {
-    streams: state.streams,
+    streams: state.streams
   }
 }
 

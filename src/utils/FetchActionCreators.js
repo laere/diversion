@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-class APIFetchActionCreators {
+class FetchActionCreators {
   constructor(endpoint, actions) {
     const [REQUEST, SUCCESS, FAILURE] = actions;
 
@@ -16,7 +16,7 @@ class APIFetchActionCreators {
     return (dispatch) => {
       dispatch(this.request());
 
-      return APIRequest.get(this.endpoint)
+      return axios.get(this.endpoint)
         .then(res => {
           dispatch(this.receive(this.actions.SUCCESS, res.data));
         })
@@ -32,7 +32,7 @@ class APIFetchActionCreators {
     };
   }
 
-  receive(type, data = {}) {
+  receive(type, data) {
     return {
       type,
       data,
@@ -40,4 +40,4 @@ class APIFetchActionCreators {
   }
 }
 
-export default APIFetchActionCreators;
+export default FetchActionCreators;

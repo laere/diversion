@@ -11,15 +11,7 @@ const Streams = () => {
         <Heading
           className="streamsHeader header"
           header="Streams"/>
-          <ul>
-            {this.props.streams.map((stream, index) => {
-              return (
-                <li key={index}>
-                  {stream.game}
-                </li>
-              );
-            })}
-          </ul>
+        
       </MainContent>
     </div>
   );

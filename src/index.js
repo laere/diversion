@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-//  STORE
+//  STORE METHODS
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 // MIDDLEWARE
 import Thunk from 'redux-thunk';
 import Promise from 'redux-promise';
-// ROUTING
+// ROUTING METHODS
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+import { syncHistoryWithStore } from 'react-router-redux';
 // CONTAINERS
 import App from './app/app';
 import Home from './containers/HomeContainer';
@@ -17,17 +17,13 @@ import Streams from './containers/StreamsContainer';
 import Videos from './containers/VideosContainer';
 import Users from './containers/UsersContainer';
 //REDUCERS
-import State from '../reducers/RootReducer';
-
-
-
+import rootReducer from './reducers/RootReducer';
 // Store with middleware.
 const createStoreWithMiddleware = compose(
   applyMiddleware(Thunk, Promise),
   window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
-
-const store = createStoreWithMiddleware(State);
+const store = createStoreWithMiddleware(rootReducer);
 // Sync history with store
 const history = syncHistoryWithStore(browserHistory, store);
 

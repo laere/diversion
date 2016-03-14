@@ -1,5 +1,5 @@
-import FetchActionCreators from '../utils/FetchActionCreators';
-import FetchReducerPrototype from '../utils/FetchReducerPrototype';
+import FetchActionCreators from './utils/FetchActionCreators';
+import FetchReducerPrototype from './utils/FetchReducerPrototype';
 
 const REQUEST_STREAMS = 'REQUEST_STREAMS';
 const RECEIVE_STREAMS_SUCCESS = 'RECEIVE_STREAMS_SUCCESS';
