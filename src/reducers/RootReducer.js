@@ -6,5 +6,6 @@ import VideosReducer from './VideosReducer';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  streams: StreamsReducer
+  streams: StreamsReducer,
+  videos: VideosReducer
 });
