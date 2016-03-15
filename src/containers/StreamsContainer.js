@@ -26,6 +26,7 @@ class StreamsContainer extends React.Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
     streams: state.streams
   }

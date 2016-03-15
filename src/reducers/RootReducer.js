@@ -3,11 +3,12 @@ import { routerReducer } from 'react-router-redux';
 
 import StreamsReducer from './StreamsReducer';
 // import VideosReducer from './VideosReducer';
-// import GamesReducer from './GamesReducer';
+import GamesReducer from './GamesReducer';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
-  streams: StreamsReducer
+  streams: StreamsReducer,
+  games: GamesReducer
 });
 
 export default rootReducer;

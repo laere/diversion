@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import MainContent from '../components/MainContent';
+import Heading from '../components/Heading';
 
-const Games = () => {
-  return (
-    <div className="games">
-
-    </div>
-  );
-};
-
-export default Games;
+export default class Games extends Component {
+  render() {
+    return (
+      <div className="games">
+        <MainContent>
+          <Heading
+            className="gamesHeader header"
+            header="Games"/>
+        </MainContent>
+      </div>
+    );
+  }
+}
