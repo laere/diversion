@@ -11,7 +11,7 @@ const StreamsListItem = ({ key, game, name, url, image, views, viewers, follower
       </div>
       <div>
         <span>{viewers} viewers on <strong>{name}</strong></span>
-        <span className='contentListItemFollowers'>{followers} followers</span>
+        <span className='contentListItemFloatLefts'>{followers} followers</span>
       </div>
     </div>
   );

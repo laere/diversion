@@ -12,10 +12,11 @@ export default class Videos extends Component {
       return (
         <VideosListItem
           key={index}
-          game={video.game}
-          name={video.name}
+          title={video.title.slice(0, 40).concat('...')}
           link={video.url}
           image={video.preview}
+          name={video.channel.display_name}
+          views={video.views}
         />
       );
     });

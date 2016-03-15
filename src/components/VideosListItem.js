@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 
-const VideosListItem = ({ key, game, name, link, image }) => {
+const VideosListItem = ({ key, name, title, link, image, views }) => {
   return (
-    <div key={key} className=".contentListItem">
-      <span>{game}</span>
-      <span>{name}</span>
+    <div key={key} className="contentListItem">
+      <span>{title}</span>
       <div>
         <a href={link}>
           <img src={image} alt="image" />
         </a>
       </div>
-      <span></span>
-      <span></span>
+      <span>{name}</span>
+      <span className="contentListItemFloatLeft">{views}</span>
     </div>
   );
 }
+
+VideosListItem.propTypes = {
+  game: React.PropTypes.string,
+  name: React.PropTypes.string,
+  link: React.PropTypes.string,
+  image: React.PropTypes.string
+};
 
 export default VideosListItem

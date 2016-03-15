@@ -16,7 +16,7 @@
     }
   }
 
-  .contentListItemFollowers {
+  .contentListItemFloatLeft {
     float: right;
   }
 
@@ -28,6 +28,11 @@
   .gamesList {
     margin-top: 260px;
     padding-left: 370px;
+  }
+
+  .videosList {
+    margin-top: 260px;
+    padding-left: 300px;
   }
 
   @keyframes growOnHover {
