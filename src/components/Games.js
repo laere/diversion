@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
 import Heading from '../components/Heading';
-import ListItem from '../components/ListItem';
+import GamesListItem from '../components/GamesListItem';
 
 export default class Games extends Component {
 
@@ -10,8 +10,11 @@ export default class Games extends Component {
     const gamesData = games.data.top;
     let gamesItems = gamesData.map((game, index) => {
       return (
-        <ListItem
+        <GamesListItem
           key={index}
+          name={game.game.name}
+          viewers={game.viewers}
+          image={game.game.box.medium}
         />
       );
     });
@@ -19,11 +22,10 @@ export default class Games extends Component {
     return (
       <MainContent>
         <Heading style="gamesHeader header" header="Games"/>
+        <ul>
+          {gamesItems}
+        </ul>
       </MainContent>
     );
   }
 }
-
-Games.propTypes = {
-  games: React.PropTypes.obj.isRequired
-};

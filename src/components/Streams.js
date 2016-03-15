@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
 import Heading from '../components/Heading';
-import ListItem from '../components/ListItem';
+import StreamsListItem from '../components/StreamsListItem';
 
 export default class Streams extends Component {
 
@@ -10,7 +10,7 @@ export default class Streams extends Component {
     const streamsData = streams.data.streams;
     let streamItems = streamsData.map((stream, index) => {
       return (
-        <ListItem
+        <StreamsListItem
           key={index}
           game={stream.channel.game}
           image={stream.preview.medium}
