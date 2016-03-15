@@ -5,7 +5,7 @@ const VideosListItem = ({ key, name, title, link, image, views }) => {
     <div key={key} className="contentListItem">
       <span>{title}</span>
       <div>
-        <a href={link}>
+        <a href={link} target="_blank">
           <img src={image} alt="image" />
         </a>
       </div>

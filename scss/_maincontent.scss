@@ -8,7 +8,7 @@
 
   .contentListItem {
     display: inline-block;
-    padding: 24px;
+    padding: 32px;
     font-size: 1.35rem;
     &:hover {
       animation: growOnHover 0.2s ease-out;
@@ -20,19 +20,14 @@
     float: right;
   }
 
-  .streamsList {
-    margin-top: 240px;
-    padding-left: 300px;
+  .streamsList, .videosList {
+    margin-top: 260px;
+    padding-left: 290px;
   }
 
   .gamesList {
     margin-top: 260px;
     padding-left: 370px;
-  }
-
-  .videosList {
-    margin-top: 260px;
-    padding-left: 300px;
   }
 
   @keyframes growOnHover {
@@ -44,6 +39,5 @@
       transform: scale(1.2);
     }
   }
-
 
 }

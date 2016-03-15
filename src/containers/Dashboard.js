@@ -26,6 +26,13 @@ export default class Dashboard extends Component  {
                     bgColor={'#6870B8'}
                     fontColor={'#fff'}
                     />
+                {/*<DashboardLink
+                    style="dashboardLink videosLink"
+                    type="videos"
+                    icon="fa fa-video-camera fa-2x"
+                    bgColor={'#6870B8'}
+                    fontColor={'#fff'}
+                    />*/}
                 <DashboardLink
                     style="dashboardLink usersLink"
                     type="users"

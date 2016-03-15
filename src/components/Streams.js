@@ -19,7 +19,7 @@ export default class Streams extends Component {
           viewers={stream.viewers}
           followers={stream.channel.followers}
           views={stream.channel.views}
-          />
+        />
       );
     });
 

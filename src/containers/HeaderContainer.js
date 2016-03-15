@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Searchbar from '../components/Searchbar';
 import Logo from '../components/Logo';
-
-
 import { connect } from 'react-redux';
 import { getInput, getUsers } from '../actions/actions';
 
-
 class HeaderContainer extends Component {
-
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -27,9 +23,7 @@ class HeaderContainer extends Component {
   }
 
   render() {
-
     const { input } = this.props;
-
     return (
       <header>
         <div className="mainHeader">
