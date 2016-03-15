@@ -13,27 +13,34 @@ export default class Streams extends Component {
         <ListItem
           key={index}
           game={stream.channel.game}
-          image={stream.preview.large}
+          image={stream.preview.medium}
           url={stream.channel.url}
-          name={stream.channel.name}
+          name={stream.channel.display_name}
           viewers={stream.viewers}
-          followers={stream.followers}
-          views={strea.views}
-        />
+          followers={stream.channel.followers}
+          views={stream.channel.views}
+          />
       );
     });
 
     return (
       <MainContent>
         <Heading style="streamsHeader header" header="Streams"/>
-        <div className="content">
-          {streamItems}
-        </div>
+          <ul>
+            {streamItems}
+          </ul>
       </MainContent>
     );
   }
 };
 
 Streams.propTypes = {
-  streams: React.PropTypes.object
+  streams: React.PropTypes.object,
+  game: React.PropTypes.string,
+  name: React.PropTypes.string,
+  url: React.PropTypes.string,
+  image: React.PropTypes.string,
+  views: React.PropTypes.number,
+  followers: React.PropTypes.number,
+  viewers: React.PropTypes.number
 };

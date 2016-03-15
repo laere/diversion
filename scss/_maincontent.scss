@@ -1,29 +1,27 @@
-.mainContentWrapper {
-  //background-color: red;
-  width: 100%;
-  height: auto;
-  position: relative;
+.content  {
   background-color: $whitegrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  float: right;
+  height: auto;
 
-  .content{
-    //background-color: red;
-    padding: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    margin-left: 156px;
-
-
-    .contentListItem {
-      display: inline-block;
-      padding: 32px;
-      & span:nth-child(2) {
-        float: right;
-      }
-    }
-
+  .contentListItem {
+    display: inline-block;
+    padding: 24px;
+    font-size: 1.35rem;
   }
 
+  .contentListItemFollowers {
+    float: right;
+  }
+
+  ul {
+    padding: 48px;
+    margin-top: 210px;
+    margin-left: 242px;
+
+  }
 
 }
