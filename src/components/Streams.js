@@ -26,7 +26,7 @@ export default class Streams extends Component {
     return (
       <MainContent>
         <Heading style="streamsHeader header" header="Streams"/>
-          <ul>
+          <ul className="streamsList">
             {streamItems}
           </ul>
       </MainContent>

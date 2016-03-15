@@ -14,7 +14,7 @@ export default class Games extends Component {
           key={index}
           name={game.game.name}
           viewers={game.viewers}
-          image={game.game.box.medium}
+          image={game.game.box.large}
         />
       );
     });
@@ -22,7 +22,7 @@ export default class Games extends Component {
     return (
       <MainContent>
         <Heading style="gamesHeader header" header="Games"/>
-        <ul>
+        <ul className="gamesList">
           {gamesItems}
         </ul>
       </MainContent>

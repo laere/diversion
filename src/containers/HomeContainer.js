@@ -8,10 +8,10 @@ export default class HomeContainer extends Component {
       <div className="homeContainer">
         <MainContent>
           <Heading
-            className="homeHeader header"
+            style="homeHeader header"
             header="Home"
           />
-        
+
         </MainContent>
       </div>
     );
