@@ -8,7 +8,7 @@ export default class Games extends Component {
       <div className="games">
         <MainContent>
           <Heading
-            className="gamesHeader header"
+            style="gamesHeader header"
             header="Games"/>
         </MainContent>
       </div>

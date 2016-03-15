@@ -17,7 +17,7 @@ class UsersContainer extends Component {
       <div className="usersContainer">
         <MainContent>
           <Heading
-            className="usersHeader header"
+            style="usersHeader header"
             header="Users"
           />
           <Users />

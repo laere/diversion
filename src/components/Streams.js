@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
 import MainContent from '../components/MainContent';
 import Heading from '../components/Heading';
+import ListItem from '../components/ListItem';
 
 export default class Streams extends Component {
 
   render() {
     const { streams } = this.props;
-    let streamItems = streams.data.streams.map((stream, index) => {
+    const streamsData = streams.data.streams;
+    let streamItems = streamsData.map((stream, index) => {
       return (
-        <div>
-          <li key={index}>{stream.game}</li>
-          <img src={stream.preview.large} alt="images" />
-        </div>
+        <ListItem
+          key={index}
+          game={stream.channel.game}
+          image={stream.preview.large}
+          url={stream.channel.url}
+          name={stream.channel.name}
+          viewers={stream.viewers}
+          followers={stream.followers}
+          views={strea.views}
+        />
       );
     });
 
     return (
-      <div className="streams">
-        <MainContent>
-          <Heading className="streamsHeader header" header="Streams"/>
+      <MainContent>
+        <Heading style="streamsHeader header" header="Streams"/>
+        <div className="content">
           {streamItems}
-        </MainContent>
-      </div>
+        </div>
+      </MainContent>
     );
   }
 };
 
 Streams.propTypes = {
-  streams: React.PropTypes.obj
+  streams: React.PropTypes.object
 };

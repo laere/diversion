@@ -1,10 +1,29 @@
-.mainContent {
+.mainContentWrapper {
   //background-color: red;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  height: auto;
   position: relative;
   background-color: $whitegrey;
+
+  .content{
+    //background-color: red;
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-left: 156px;
+
+
+    .contentListItem {
+      display: inline-block;
+      padding: 32px;
+      & span:nth-child(2) {
+        float: right;
+      }
+    }
+
+  }
+
+
 }

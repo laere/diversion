@@ -22,7 +22,7 @@ class VideosContainer extends Component {
       <div className="videosContainer">
         <MainContent>
           <Heading
-            className="videosHeader header"
+            style="videosHeader header"
             header="Videos"
           />
           <Videos />
