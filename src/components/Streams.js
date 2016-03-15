@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import MainContent from '../components/MainContent';
 import Heading from '../components/Heading';
-
 
 const Streams = () => {
   return (
@@ -11,7 +10,6 @@ const Streams = () => {
         <Heading
           className="streamsHeader header"
           header="Streams"/>
-        
       </MainContent>
     </div>
   );

@@ -29,11 +29,11 @@
       font-size: 1.5rem;
       background-color: $lightblack;
       color: $white;
-  
+
       &:focus {
         outline: none;
-        animation: extend 0.25s ease-out;
-        animation-fill-mode: forwards;
+        // animation: extend 0.25s ease-out;
+        // animation-fill-mode: forwards;
       }
     }
   }

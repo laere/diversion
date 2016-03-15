@@ -11,4 +11,9 @@ const Logo = (props) => {
   );
 };
 
+Logo.propTypes = {
+  path: React.PropTypes.string,
+  className: React.PropTypes.string
+};
+
 export default Logo;

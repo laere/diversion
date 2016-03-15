@@ -2,10 +2,12 @@ import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
 import StreamsReducer from './StreamsReducer';
+// import VideosReducer from './VideosReducer';
+// import GamesReducer from './GamesReducer';
 
 const rootReducer = combineReducers({
-  streams: StreamsReducer,
-  routing: routerReducer
+  routing: routerReducer,
+  streams: StreamsReducer
 });
 
 export default rootReducer;

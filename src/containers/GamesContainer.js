@@ -1,41 +1,34 @@
-import React, { Component } from 'react';
-import MainContent from '../components/MainContent';
-import Heading from '../components/Heading';
+import React, { PropTypes } from 'react';
 import Games from '../components/Games';
-
+import Loading from '../components/Loading';
 import { connect } from 'react-redux';
-import { getGames } from '../actions/actions';
+import { gamesFetchActions } from '../reducers/GamesReducer';
 
-class GamesContainer extends Component {
-
-  constructor(props) {
-    super(props);
-  }
+class GamesContainer extends React.Component {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    games: PropTypes.object.isRequired
+  };
 
   componentDidMount() {
-    const { getGames } = this.props;
-    getGames();
+    const { dispatch, games } = this.props;
+    if (!games.fetching && !games.data) {
+      dispatch(gamesFetchActions.fetch());
+    }
   }
 
   render() {
-    return (
-      <div className="gamesContainer">
-        <MainContent>
-          <Heading
-            className="gamesHeader header"
-            header="Games"
-          />
-          <Games />
-        </MainContent>
-      </div>
-    );
+    const { games } = this.props;
+    return games.fetching ?
+      <Loading name='Loading...'/> :
+      <Games games={games}/>;
   }
 }
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
   return {
     games: state.games
-  };
-};
+  }
+}
 
-export default connect(mapStateToProps, { getGames } )(GamesContainer);
+export default connect(mapStateToProps)(GamesContainer);
