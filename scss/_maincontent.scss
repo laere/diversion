@@ -10,6 +10,10 @@
     display: inline-block;
     padding: 24px;
     font-size: 1.35rem;
+    &:hover {
+      animation: growOnHover 0.2s ease-out;
+      animation-fill-mode: forwards;
+    }
   }
 
   .contentListItemFollowers {
@@ -22,8 +26,19 @@
   }
 
   .gamesList {
-    margin-top: 240px;
+    margin-top: 260px;
     padding-left: 370px;
   }
+
+  @keyframes growOnHover {
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
 
 }

@@ -1,41 +1,35 @@
-import React, { Component } from 'react';
-import MainContent from '../components/MainContent';
-import Heading from '../components/Heading';
+import React, { PropTypes } from 'react';
 import Videos from '../components/Videos';
-
+import Loading from '../components/Loading';
 import { connect } from 'react-redux';
-import { getVideos } from '../actions/actions';
+import { videosFetchActions } from '../reducers/VideosReducer';
 
-class VideosContainer extends Component {
-
-  constructor (props) {
-    super(props);
-  }
+class VideosContainer extends React.Component {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    videos: PropTypes.object.isRequired
+  };
 
   componentDidMount() {
-    const { getVideos } = this.props;
-    getVideos();
+    const { dispatch, videos } = this.props;
+    if (!videos.fetching && !videos.data) {
+      dispatch(videosFetchActions.fetch());
+    }
   }
 
   render() {
-    return (
-      <div className="videosContainer">
-        <MainContent>
-          <Heading
-            style="videosHeader header"
-            header="Videos"
-          />
-          <Videos />
-        </MainContent>
-      </div>
-    );
+    const { videos } = this.props;
+    return videos.fetching ?
+      <Loading header="Loading..." /> :
+      <Videos videos={videos} />;
   }
 }
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
+  console.log(state);
   return {
     videos: state.videos
-  };
-};
+  }
+}
 
-export default connect(mapStateToProps, { getVideos } )(VideosContainer);
+export default connect(mapStateToProps)(VideosContainer);

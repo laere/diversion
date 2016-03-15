@@ -1,16 +1,16 @@
 import FetchActionCreators from '../utils/FetchActionCreators';
 import FetchReducerPrototype from '../utils/FetchReducerPrototype';
 
-const REQUEST_STREAMS = 'REQUEST_STREAMS';
-const RECEIVE_STREAMS_SUCCESS = 'RECEIVE_STREAMS_SUCCESS';
-const RECEIVE_STREAMS_FAILURE = 'RECEIVE_STREAMS_FAILURE';
+const REQUEST_VIDEOS = 'REQUEST_VIDEOS';
+const RECEIVE_VIDEOS_SUCCESS = 'RECEIVE_VIDEOS_SUCCESS';
+const RECEIVE_VIDEOS_FAILURE = 'RECEIVE_VIDEOS_FAILURE';
 
 export const videosFetchActions = new FetchActionCreators(
-  'https://api.twitch.tv/kraken/videos/top',
+  'https://api.twitch.tv/kraken/videos/top?limit=50',
   [
-    REQUEST_STREAMS,
-    RECEIVE_STREAMS_SUCCESS,
-    RECEIVE_STREAMS_FAILURE
+    REQUEST_VIDEOS,
+    RECEIVE_VIDEOS_SUCCESS,
+    RECEIVE_VIDEOS_FAILURE
   ]
 );
 
