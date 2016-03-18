@@ -5,6 +5,12 @@ import { connect } from 'react-redux';
 import { getInput, getUsers } from '../actions/actions';
 
 class HeaderContainer extends Component {
+
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    input: PropTypes.string.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -41,9 +47,8 @@ class HeaderContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    input: state.input,
-    users: state.users
+    input: state.input
   };
 };
 
-export default connect(mapStateToProps, { getInput, getUsers } )(HeaderContainer);
+export default connect(mapStateToProps, { getInput } )(HeaderContainer);

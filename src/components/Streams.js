@@ -23,6 +23,11 @@ export default class Streams extends Component {
       );
     });
 
+    //filter streams based on name
+    // .filter(stream => {
+    //   return stream.name.toLowerCase().indexOf(input) !== -1;
+    // });
+
     return (
       <MainContent>
         <Heading style="streamsHeader header" header="Streams"/>
