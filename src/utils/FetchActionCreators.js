@@ -12,15 +12,15 @@ class FetchActionCreators {
     this.endpoint = endpoint;
   }
 
-  fetch() {
+  fetch(input) {
     return (dispatch) => {
       dispatch(this.request());
 
-      return axios.get(this.endpoint)
+      return axios.get(this.endpoint + input)
         .then(res => {
           dispatch(this.receive(this.actions.SUCCESS, res.data));
         })
-        .catch((res) => {
+        .catch(res => {
           dispatch(this.receive(this.actions.FAILURE));
         });
     };

@@ -7,7 +7,8 @@ import { streamsFetchActions } from '../reducers/StreamsReducer';
 class StreamsContainer extends React.Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
-    streams: PropTypes.object.isRequired
+    streams: PropTypes.object.isRequired,
+    input: PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -27,7 +28,8 @@ class StreamsContainer extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    streams: state.streams
+    streams: state.streams,
+    input: state.input
   }
 }
 
