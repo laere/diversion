@@ -4,7 +4,7 @@ import Heading from '../components/Heading';
 
 export default class Channels extends Component {
 
-  render()
+  render() {
     return (
       <MainContent>
         <Heading style="channelsHeader header" header="Channels"/>

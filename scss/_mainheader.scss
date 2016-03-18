@@ -51,15 +51,6 @@
     }
   }
 
-  .twitchButton {
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 32px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   @keyframes extend {
     50% {
       width: 300px;
