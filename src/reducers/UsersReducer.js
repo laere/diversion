@@ -6,7 +6,7 @@ const RECEIVE_USERS_SUCCESS = 'RECEIVE_USERS_SUCCESS';
 const RECEIVE_USERS_FAILURE = 'RECEIVE_USERS_FAILURE';
 
 export const usersFetchActions = new FetchActionCreators(
-  'https://api.twitch.tv/kraken/user/lirik',
+  'https://api.twitch.tv/kraken/users/lirik',
   [
     REQUEST_USERS,
     RECEIVE_USERS_SUCCESS,

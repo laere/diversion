@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
+import MainContent from '../components/MainContent';
+import Heading from '../components/Heading';
 
-const Users = () => {
-  return (
-    <div className="users">
 
-    </div>
-  );
-};
+export default class Users extends Component {
+  render() {
 
-export default Users;
+    const { users } = this.props;
+    const usersObj = users.data;
+
+    return (
+      <MainContent>
+        <Heading style="usersHeader header" header="Users"/>
+          <div className="channelInfo">
+            <div>{usersObj.display_name}</div>
+            <img src={usersObj.logo} alt="user logo" />
+            <div>{usersObj.bio}</div>
+          </div>
+      </MainContent>
+    );
+  };
+}

@@ -13,7 +13,7 @@ class UsersContainer extends React.Component {
   componentDidMount() {
     const { dispatch, users } = this.props;
     if (!users.fetching && !users.data) {
-      dispatch(usersFetchActions.fetch('https://api.twitch.tv/kraken/users?limit=100'));
+      dispatch(usersFetchActions.fetch('https://api.twitch.tv/kraken/users/lirik'));
     }
   }
 
@@ -21,7 +21,7 @@ class UsersContainer extends React.Component {
     const { users, input } = this.props;
     return users.fetching ?
       <Loading name='Loading...'/> :
-      <Users users={users} input={input}/>;
+      <Users users={users} />;
   }
 }
 
