@@ -6,6 +6,7 @@ import VideosReducer from './VideosReducer';
 import GamesReducer from './GamesReducer';
 import ChannelsReducer from './ChannelsReducer'
 import InputReducer from './InputReducer';
+import UsersReducer from './UsersReducer';
 
 const rootReducer = combineReducers({
   routing: routerReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   games: GamesReducer,
   videos: VideosReducer,
   channels: ChannelsReducer,
+  users: UsersReducer,
   input: InputReducer
 });
 

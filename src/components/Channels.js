@@ -13,10 +13,19 @@ export default class Channels extends Component {
     return (
       <MainContent>
         <Heading style="channelsHeader header" header="Channels"/>
-          <ul className="streamsList">
-            {channelObj.name}
-            {channelObj.status}
-          </ul>
+          <div className="channelInfo">
+            <span>{channelObj.game}</span>
+            <div>{channelObj.status}</div>
+            <div>
+              <a href={channelObj.url} target="_blank">
+                <img src={channelObj.logo} alt="channel logo" width="400"/>
+              </a>
+            </div>
+            <div>
+              <div>{channelObj.viewers} viewers on <strong>{channelObj.name}</strong></div>
+              <div>{channelObj.followers} followers</div>
+            </div>
+          </div>
       </MainContent>
     );
   }
