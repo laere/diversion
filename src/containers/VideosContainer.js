@@ -13,7 +13,7 @@ class VideosContainer extends React.Component {
   componentDidMount() {
     const { dispatch, videos } = this.props;
     if (!videos.fetching && !videos.data) {
-      dispatch(videosFetchActions.fetch());
+      dispatch(videosFetchActions.fetch('https://api.twitch.tv/kraken/videos/top?limit=100'));
     }
   }
 

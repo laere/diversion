@@ -1,20 +1,20 @@
 import React, { Component, PropTypes } from 'react';
-import Searchbar from '../components/Searchbar';
-import Logo from '../components/Logo';
+import Header from '../components/Header';
 import { connect } from 'react-redux';
-import { getInput, getUsers } from '../actions/actions';
+import { getInput } from '../reducers/InputReducer';
+import { channelsFetchActions } from '../reducers/ChannelsReducer';
 
-class HeaderContainer extends Component {
-
+class HeaderContainer extends React.Component {
   static propTypes = {
-    dispatch: PropTypes.func.isRequired,
-    input: PropTypes.string.isRequired
+    input: PropTypes.object.isRequired,
+    channels: PropTypes.object.isRequired,
+    dispatch: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-    this.handleOnChange = this.handleOnChange.bind(this);
     this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
   handleOnChange(e) {
@@ -22,33 +22,34 @@ class HeaderContainer extends Component {
     getInput(e.target.value);
   }
 
-  handleOnClick(e) {
-    e.preventDefault();
-    const { getUsers, input } = this.props;
-    getUsers(input);
+  handleOnClick() {
+    console.log('test test');
+    const { getInput } = this.props;
+    getInput(input);
   }
 
   render() {
     const { input } = this.props;
     return (
-      <header>
-        <div className="mainHeader">
-          <Logo path='/' className="logo" />
-          <Searchbar
-            input={input}
-            onChange={this.handleOnChange}
-            onClick={this.handleOnClick}
-         />
-        </div>
-      </header>
-    );
+      <Header
+        input={input}
+        onChange={this.handleOnChange}
+        onClick={this.handleOnClick} />
+      );
+    }
   }
-}
 
-const mapStateToProps = (state) => {
-  return {
-    input: state.input
-  };
-};
+  function mapStateToProps(state) {
+    return {
+      channels: state.channels,
+      input: state.input
+    }
+  }
 
-export default connect(mapStateToProps, { getInput } )(HeaderContainer);
+  function mapDispatchToProps(dispatch) {
+    return {
+      getInput: (input) => dispatch(channelsFetchActions({params: {input}}))
+    }
+  }
+
+  export default connect(mapStateToProps, {getInput})(HeaderContainer);

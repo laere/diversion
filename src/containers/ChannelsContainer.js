@@ -13,7 +13,7 @@ class ChannelsContainer extends React.Component {
   componentDidMount() {
     const { dispatch, channels } = this.props;
     if (!channels.fetching && !channels.data) {
-      dispatch(channelsFetchActions.fetch());
+      dispatch(channelsFetchActions.fetch('https://api.twitch.tv/kraken/channels/imaqtpie'));
     }
   }
 
@@ -21,7 +21,7 @@ class ChannelsContainer extends React.Component {
     const { channels } = this.props;
     return channels.fetching ?
       <Loading name='Loading...'/> :
-      <Channels channels={channels}/>;
+      <Channels channels={channels} />;
   }
 }
 

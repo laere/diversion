@@ -12,11 +12,11 @@ class FetchActionCreators {
     this.endpoint = endpoint;
   }
 
-  fetch(input) {
+  fetch({endpoint, params}) {
     return (dispatch) => {
       dispatch(this.request());
 
-      return axios.get(this.endpoint + input)
+      return axios.get(endpoint || this.endpoint , { params })
         .then(res => {
           dispatch(this.receive(this.actions.SUCCESS, res.data));
         })

@@ -11,7 +11,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 // CONTAINERS
 import App from './app/app';
-import Home from './containers/HomeContainer';
+import Home from './components/Home';
 import Games from './containers/GamesContainer';
 import Streams from './containers/StreamsContainer';
 import Videos from './containers/VideosContainer';
@@ -27,8 +27,6 @@ const createStoreWithMiddleware = compose(
 const store = createStoreWithMiddleware(rootReducer);
 // Sync history with store
 const history = syncHistoryWithStore(browserHistory, store);
-
-
 
 ReactDOM.render(
   <Provider store={store}>

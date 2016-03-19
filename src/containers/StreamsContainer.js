@@ -8,21 +8,21 @@ class StreamsContainer extends React.Component {
   static propTypes = {
     dispatch: PropTypes.func.isRequired,
     streams: PropTypes.object.isRequired,
-    input: PropTypes.string.isRequired
+    input: PropTypes.object.isRequired
   };
 
   componentDidMount() {
     const { dispatch, streams } = this.props;
     if (!streams.fetching && !streams.data) {
-      dispatch(streamsFetchActions.fetch());
+      dispatch(streamsFetchActions.fetch('https://api.twitch.tv/kraken/streams?limit=100'));
     }
   }
 
   render() {
-    const { streams } = this.props;
+    const { streams, input } = this.props;
     return streams.fetching ?
       <Loading name='Loading...'/> :
-      <Streams streams={streams}/>;
+      <Streams streams={streams} input={input}/>;
   }
 }
 

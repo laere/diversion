@@ -1,4 +1,3 @@
-
 const GET_INPUT = 'GET_INPUT';
 
 const INITIAL_STATE = {
@@ -6,19 +5,21 @@ const INITIAL_STATE = {
 }
 
 export const getInput = (input) => {
-  return {
-    type: GET_INPUT,
-    payload: input
-  };
-};
+  return (dispatch) => {
+    dispatch({
+      type: GET_INPUT,
+      payload: input
+    })
+  }
+}
 
-export default function userInput(state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
-    case GET_INPUT: {
+    case GET_INPUT:
+      console.log(state);
       return Object.assign({}, state, {
         input: action.payload
       });
-    }
     default:
       return state;
   }

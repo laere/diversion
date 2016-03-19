@@ -8,6 +8,12 @@ export default class Streams extends Component {
   render() {
     const { streams, input } = this.props;
     const streamsData = streams.data.streams;
+
+    // let streamItems = streamsData.filter(stream => {
+    //   console.log(input);
+    //   return stream.channel.game.toLowerCase().indexOf(input);
+    // });
+
     let streamItems = streamsData.map((stream, index) => {
       return (
         <StreamsListItem
@@ -21,13 +27,8 @@ export default class Streams extends Component {
           views={stream.channel.views}
         />
       );
-    });
-
-    //filter streams based on name
-    // .filter(stream => {
-    //   return stream.name.toLowerCase().indexOf(input) !== -1;
-    // });
-
+    })
+    
     return (
       <MainContent>
         <Heading style="streamsHeader header" header="Streams"/>
