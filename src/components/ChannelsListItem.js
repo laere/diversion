@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-const ChannelsListItem = ({ key, game, status, name, url, image, views, followers }) => {
+const ChannelsListItem = ({ channelObj }) => {
   return (
     <div className="contentListItem">
-      <span>{game}</span>
+      <span>{channelObj.name}</span>
     </div>
   );
 }

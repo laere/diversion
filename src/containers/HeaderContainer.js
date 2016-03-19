@@ -7,8 +7,7 @@ import { channelsFetchActions } from '../reducers/ChannelsReducer';
 class HeaderContainer extends React.Component {
   static propTypes = {
     input: PropTypes.object.isRequired,
-    channels: PropTypes.object.isRequired,
-    dispatch: PropTypes.func.isRequired
+    channels: PropTypes.object.isRequired
   };
 
   constructor(props) {
