@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Dashboard from '../containers/Dashboard';
+import Dashboard from '../components/Dashboard';
 import Header from '../containers/HeaderContainer';
 import '../../scss/main.scss';
 
