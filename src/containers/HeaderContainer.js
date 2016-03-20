@@ -23,8 +23,8 @@ class HeaderContainer extends React.Component {
 
   handleOnClick() {
     console.log('test test');
-    const { getInput } = this.props;
-    getInput(input);
+    const { getInput, input } = this.props;
+    getInput();
   }
 
   render() {
@@ -47,8 +47,8 @@ class HeaderContainer extends React.Component {
 
   function mapDispatchToProps(dispatch) {
     return {
-      getInput: (input) => dispatch(channelsFetchActions({params: {input}}))
+      getInput: (input) => dispatch(channelsFetchActions.fetch({endpoint: `https://api.twitch.tv/kraken/channels/${input}`}))
     }
   }
 
-  export default connect(mapStateToProps, {getInput})(HeaderContainer);
+  export default connect(mapStateToProps, mapDispatchToProps)(HeaderContainer);
