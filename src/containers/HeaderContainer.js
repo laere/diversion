@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Header from '../components/Header';
-import { getInput } from '../reducers/InputReducer';
+import { getChannelInput } from '../reducers/InputReducer';
 import { connect } from 'react-redux';
 import { channelsFetchActions } from '../reducers/ChannelsReducer';
 
@@ -17,8 +17,8 @@ class HeaderContainer extends React.Component {
   }
 
   handleOnChange(e) {
-    const { getInput } = this.props;
-    getInput(e.target.value);
+    const { getChannelInput } = this.props;
+    getChannelInput(e.target.value);
   }
 
   handleOnClick() {
@@ -47,7 +47,7 @@ class HeaderContainer extends React.Component {
 
   function mapDispatchToProps(dispatch) {
     return {
-      getInput: (input) => dispatch(channelsFetchActions.fetch({endpoint: `https://api.twitch.tv/kraken/channels/${input}`}))
+      getChannelInput: (input) => dispatch(channelsFetchActions.fetch({endpoint: `https://api.twitch.tv/kraken/channels/${input}`}))
     }
   }
 
