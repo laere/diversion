@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --inline --hot --history-api-fallback",
-    "dist": "NODE_ENV=production ./node_modules/.bin/webpack -p --config webpack.config.production.js" 
+    "dist": "./node_modules/.bin/webpack -p --config webpack.config.production.js "
   },
   "repository": {
     "type": "git",

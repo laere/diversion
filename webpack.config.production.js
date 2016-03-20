@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'production';
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -40,9 +41,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'My React Webpage',
-      filename: 'index.html',
-      template: 'index.html.ejs',
-      favicon: path.join(__dirname, 'assets/images/favicon.ico')
+      filename: 'index.html'
     }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
     new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.[hash].bundle.js")
@@ -77,6 +76,9 @@ module.exports = {
       }, {
         test: /\.png$/,
         loader: "file"
+      }, {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
       }
     ]
   },
