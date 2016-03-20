@@ -24,7 +24,7 @@
     input {
       border: none;
       padding: 8px;
-      width: 200px;
+      width: 400px;
       border-radius: 5px;
       font-size: 1.5rem;
       background-color: $lightblack;
@@ -32,8 +32,8 @@
 
       &:focus {
         outline: none;
-        animation: extend 0.25s ease-out;
-        animation-fill-mode: forwards;
+        // animation: extend 0.25s ease-out;
+        // animation-fill-mode: forwards;
       }
     }
   }

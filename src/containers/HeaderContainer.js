@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Header from '../components/Header';
-import { connect } from 'react-redux';
 import { getInput } from '../reducers/InputReducer';
+import { connect } from 'react-redux';
 import { channelsFetchActions } from '../reducers/ChannelsReducer';
 
 class HeaderContainer extends React.Component {
@@ -24,7 +24,7 @@ class HeaderContainer extends React.Component {
   handleOnClick() {
     console.log('test test');
     const { getInput, input } = this.props;
-    getInput();
+    getInput(input);
   }
 
   render() {

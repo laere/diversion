@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-const Header = ({ input, onChange, onClick }) => {
+const Header = ({ onChange, onClick }) => {
   return (
     <header>
       <div className="mainHeader">
@@ -25,7 +25,6 @@ const Header = ({ input, onChange, onClick }) => {
 }
 
 Header.propTypes = {
-  input: React.PropTypes.object.isRequired,
   onChange: React.PropTypes.func.isRequired,
   onClick: React.PropTypes.func.isRequired
 }
