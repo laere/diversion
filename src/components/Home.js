@@ -11,7 +11,10 @@ export default class HomeContainer extends Component {
             style="homeHeader header"
             header="Home"
           />
-
+          <div className="homeContent">
+            <h2>Welcome to Diversion!</h2>
+            <p></p>
+          </div>
         </MainContent>
       </div>
     );
